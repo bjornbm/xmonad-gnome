@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Xmonad GNOME
+Comment=Leightweight tiling window manager
+Exec=/usr/bin/xmonad-gnome
+Icon=xmonad.png
+Type=XSession

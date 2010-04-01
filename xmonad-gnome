@@ -1,0 +1,9 @@
+#!/bin/bash
+set -o errexit
+set -o nounset
+
+# In case xmonad installed with cabal-install:
+export PATH=$HOME/.cabal/bin:$PATH  
+
+export WINDOW_MANAGER=xmonad
+exec gnome-session

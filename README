@@ -1,0 +1,14 @@
+I took the following steps to add a Xmonad-GNOME session to the login screen in Ubuntu:
+
+1. Copy xmonad-gnome to /usr/bin.
+2. Copy xmonad-gnome.desktop to /usr/share/xsessions.
+3. Set gnome-wm as default window manager for gnome-session.
+4. For the above to "stick" it seemed I had to force the first usage of xmonad by killing the running metacity and running xmonad.
+
+Code:
+
+sudo cp xmonad-gnome         /usr/bin
+sudo cp xmonad-gnome.desktop /usr/share/xsessions
+gconftool --type string --set /desktop/gnome/session/required_components/windowmanager gnome-wm
+killall metacity && xmonad
+
