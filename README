@@ -12,3 +12,10 @@ sudo cp xmonad-gnome.desktop /usr/share/xsessions
 gconftool --type string --set /desktop/gnome/session/required_components/windowmanager gnome-wm
 killall metacity && xmonad
 
+Other good stuff:
+
+1. Don't use Nautilus desktop. 
+   gconftool-2 --type boolean --set /apps/nautilus/preferences/show_desktop false
+2. Swap left alt and win key, use win key (mod4Mask) as xmonad mod key.
+   This setup gives reasonable ergonomy for xmonad while keeping left alt.
+3. Ignore gnome-do with a ManageHook.
