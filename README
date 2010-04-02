@@ -7,8 +7,8 @@ I took the following steps to add a Xmonad-GNOME session to the login screen in 
 
 Code:
 
-sudo cp xmonad-gnome         /usr/bin
-sudo cp xmonad-gnome.desktop /usr/share/xsessions
+sudo cp usr/bin/xmonad-gnome /usr/bin
+sudo cp usr/share/xsessions/xmonad-gnome.desktop /usr/share/xsessions
 gconftool --type string --set /desktop/gnome/session/required_components/windowmanager gnome-wm
 killall metacity && xmonad
 
@@ -19,3 +19,9 @@ Other good stuff:
 2. Swap left alt and win key, use win key (mod4Mask) as xmonad mod key.
    This setup gives reasonable ergonomy for xmonad while keeping left alt.
 3. Ignore gnome-do with a ManageHook.
+
+
+GRUB menu
+=========
+1. Edit /etc/default/grub to remove hidden timeout.
+2. Regenerate /boot/grub/grub.cfg by running `sudo update-grub`.
