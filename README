@@ -1,3 +1,5 @@
+Xmonad
+======
 I took the following steps to add a Xmonad-GNOME session to the login screen in Ubuntu:
 
 1. Copy xmonad-gnome to /usr/bin.
@@ -21,7 +23,12 @@ Other good stuff:
 3. Ignore gnome-do with a ManageHook.
 
 
-GRUB menu
-=========
+Grub2 menu
+==========
 1. Edit /etc/default/grub to remove hidden timeout.
 2. Regenerate /boot/grub/grub.cfg by running `sudo update-grub`.
+
+
+Kernel updates and Guest Additions
+==================================
+Reinstall VirtualBox guest additions after eache kernel change. After (re)installing the guest additions may need to use Host+G and Host+F to "enable" the resolutions greater than 800x600. Someone recommended using the linux-virtual kernel, but make sure to also install the header files or building the guest additions will fail! 
