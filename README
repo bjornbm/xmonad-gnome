@@ -32,3 +32,13 @@ Grub2 menu
 Kernel updates and Guest Additions
 ==================================
 Reinstall VirtualBox guest additions after eache kernel change. After (re)installing the guest additions may need to use Host+G and Host+F to "enable" the resolutions greater than 800x600. Someone recommended using the linux-virtual kernel, but make sure to also install the header files or building the guest additions will fail! 
+
+
+CrashPlan
+=========
+Installation says:
+
+> Your Linux system is currently configured to watch 8192 files in real time.
+> We recommend using a larger value; see the CrashPlan support site for details
+
+Fixed by adding /etc/sysctl.d/60-crashplan.conf
