@@ -42,3 +42,14 @@ Installation says:
 > We recommend using a larger value; see the CrashPlan support site for details
 
 Fixed by adding /etc/sysctl.d/60-crashplan.conf
+
+
+Cabal dependency hell
+=====================
+When this happens remove the ~/.ghc folder and reinstall all packages.
+
+Don't try to upgrade time – it invariably leads to grief! (This probably applies to many other packages included in the Haskell Platform)
+
+rm -rf .ghc/i386-linux-6.12.1/
+cabal update
+cabal install ...
